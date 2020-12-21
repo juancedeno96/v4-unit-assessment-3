@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-
 class Shelf extends Component {
     constructor() {
         super()
@@ -8,15 +7,19 @@ class Shelf extends Component {
         }
     }
 
-    addToShelf(val) {
-        
-        this.setState({shelf: this.state.shelf.push(val) })
-    }
-
     render () {
+const mappedTitles = this.props.shelf.map((e,i)=>(
+    <section key = {i}>
+        <p>{e}</p>
+    </section>
+))
         return (
             <section>
-                shelf
+                
+                <h2>Shelf: </h2>
+               <p>{mappedTitles}</p> 
+                <button onClick={()=>this.props.clearShelf()}>clear</button>
+                
             </section>
         )
     }
