@@ -1,6 +1,8 @@
 function Header () {
     return(
-        <header>Booklist</header>
+        <header>
+            <h2 className='header-title'>Booklist</h2>
+            </header>
     )
 }
 

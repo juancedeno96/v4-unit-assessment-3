@@ -40,27 +40,53 @@
 header{
   width:100vw;
   height: 10vh;
-  background-color: rebeccapurple;
+  background-color:rgba(218, 216, 216, 0.767);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(4, 196, 196)
 }
 
 .booklist1{
   display: flex;
-  width: 100vw; 
-  justify-content: space-around;
+  width: 80vw; 
+  height: 90vh;
+  flex-wrap: wrap;
+  font-size: 12px;
+  text-align: center;
+  justify-content: space-evenly ;
+  background-color:lightgray
+  
+
+  
 }
 
 .booklist1 img {
-  width: 200px;
-  height: 250px;
+  width: 160px;
+  height: 200px;
 }
 
-.booklist2{
+.main-body {
   display: flex;
-  width: 100vw; 
-  justify-content: space-around;
 }
 
-.booklist2 img {
-  width: 200px;
-  height: 250px;
+.shelf {
+  width: 20vw;
+  height: 90vh;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  background-color:lightgray
+  
+
 }
+
+.search {
+  width: 100vw;
+  height: 10vh;
+  background-color:lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

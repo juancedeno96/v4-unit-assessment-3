@@ -14,9 +14,9 @@ const mappedTitles = this.props.shelf.map((e,i)=>(
     </section>
 ))
         return (
-            <section>
+            <section className='shelf'>
                 
-                <h2>Shelf: </h2>
+                <h2>Your Shelf</h2>
                <p>{mappedTitles}</p> 
                 <button onClick={()=>this.props.clearShelf()}>clear</button>
                 

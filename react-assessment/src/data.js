@@ -7,7 +7,7 @@ const data = [
     },
     {
         id: 2,
-        title: `HTML and CSS: Design and Build Websites`, 
+        title: `HTML and CSS: Design & Build`, 
         author: `Jon Duckett`,
         img: `https://images-na.ssl-images-amazon.com/images/I/31aX81I6vnL._SX351_BO1,204,203,200_.jpg`
     },
@@ -31,7 +31,7 @@ const data = [
     },
     {
         id: 6,
-        title: `JavaScript and JQuery: Interactive Front-End Web Development`, 
+        title: `JavaScript and JQuery`, 
         author: `Jon Duckett`,
         img: `https://images-na.ssl-images-amazon.com/images/I/41y31M-zcgL._SX400_BO1,204,203,200_.jpg`
     },
@@ -55,7 +55,7 @@ const data = [
     },
     {
         id: 10,
-        title: `PostgreSQL: Up and Running`, 
+        title: `PostgreSQL: Up & Running`, 
         author: `Regina Obe`,
         img: `https://images-na.ssl-images-amazon.com/images/I/51FSjiYDfpL._SX379_BO1,204,203,200_.jpg`
     },
