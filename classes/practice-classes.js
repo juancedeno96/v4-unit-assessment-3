@@ -93,7 +93,27 @@ let ralphsLocation = ralph.location
 */
 
 //CODE HERE
-
+class Player extends Character {
+        constructor(name, type, healthLevel, attackLevel) {
+          super(name, type )
+          this.healthLevel = healthLevel
+          this.attackLevel = attackLevel
+      }
+      defend(amount) {
+        let obj = {}
+        let attack = this.healthLevel - amount
+        if (attack>0) {
+        obj =  {attackStrength: amount,
+        remainingHealth: attack,
+      message: `${this.name} is still in the fight!` }
+        }
+        else {
+         obj = `${this.name} has been defeated!`
+        }
+        return obj
+      }
+      
+ }
 /*
     Next, we'll create two Players.
     Store the first in a variable called aang, his name should be 'Aang' 
@@ -103,6 +123,8 @@ let ralphsLocation = ralph.location
 */
 
 //CODE HERE
+const aang = new Player('Aang', 'airbender', 100, 100)
+const ozai = new Player('Ozai', 'firebender', 100, 0)
 
 /*
     Let's see how a fight between these two would go. 
@@ -112,6 +134,7 @@ let ralphsLocation = ralph.location
 */
 
 //CODE HERE
+const battle = ozai.defend(aang.attackLevel)
 
 //////////////////PROBLEM 4////////////////////
 
@@ -130,7 +153,19 @@ let ralphsLocation = ralph.location
 */
 
 //CODE HERE
+class Hero extends Player {
+  constructor(name, type, healthLevel, attackLevel) {
+    super(name, type, healthLevel, attackLevel)
+    this.superPowers = []
 
+  }
+  addSuperPower(power){
+    return this.superPowers.push(power)
+  }
+  useSuperPower(index) {
+    return `${this.name} used ${this.superPowers[index]}!`
+  }
+}
 /*
   Create a hero named 'Fire Spitter' whose type is 'dragon'. 
   Fire Spitter's healthLevel and attackLevels should both be 5000. 
@@ -141,3 +176,10 @@ let ralphsLocation = ralph.location
 */
 
 //CODE HERE
+const fireSpitter = new Hero('Fire Spitter', 'dragon', 5000, 5000)
+
+const spitFire = fireSpitter.addSuperPower('spitting fire')
+const tornadoAttack = fireSpitter.addSuperPower('Tornado Attack')
+const fusrodah = fireSpitter.addSuperPower('Fus Ro Dah!!!')
+
+const fireSpitterAttack = fireSpitter.useSuperPower(0)
